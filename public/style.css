@@ -53,10 +53,10 @@
     height: 575px;
     /* border: 1px solid; */
     margin: 2px 0px;
-    width: 400px;
+    width: 382px;
+    /* background: aliceblue; */
     display: flex;
     flex-direction: column;
-    margin:auto;
     background-image: url("./resources/images/4039e0f1ef08b7b965bacb4641a7af49.jpg");
 }
 
@@ -206,4 +206,45 @@
     font-weight: bold;
     border-radius: 19px;
     margin-left: 125px;
+}
+
+.wrapper-chat-app{
+        /* border: 1px solid; */
+        display: flex;
+        width: 43%;
+        justify-content: center;
+        margin: auto;
+}
+
+.online-participants{
+    width: 31%;
+    background: lightgray;
+}
+
+.status{
+    width: 20px;
+    height: 20px;
+    display: 1px solid;
+    border: 1px solid;
+    background: lightgreen;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.person-name{
+    /* border: 1px solid; */
+    color: white;
+    margin-left: 5px;
+    font-size: 18px;
+    font-family: system-ui;
+}
+
+.person{
+    border: 1px solid;
+    height: 38px;
+    border-radius: 5px;
+    background: darkslategray;
+    margin: 2px;
+    display: flex;
+    align-items: center;
 }

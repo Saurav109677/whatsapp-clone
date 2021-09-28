@@ -9,49 +9,64 @@
    
 </head>
 <body>
-    <div class="chat-app">
-        <!-- welcome message -->
-        <div class="user-name">
-            <h1>Welcome</h1>
-            <input type="text" id="input-name" placeholder="Enter your name">
-            <button class="join-button">Join</button>
-        </div>
-        <div class="chat-box hide">
-            
-
-            <!-- chat container -->
-            <!-- <div class="chat-container hide"> -->
-
-                <!-- <div class="chat join-chat"></div> -->
-                <!-- <div class="chat leave-chat"></div> -->
-
-                    <!-- <div class="chat right">
-                    <div class="chat-name">Steve</div>
-                    <div class="chat-message"> hi there</div>
-                    </div>
-
-                    <div class="chat left">
-                        <div class="chat-name">
-                        Steve
-                    </div>
-                    <div class="chat-message">
-                        hi there
-                    </div>
-                    </div> -->
-            <!-- </div> -->
+    <div class="wrapper-chat-app">
+         <!-- online-participants -->
+        <div class="online-participants hide">
+            <!-- <div class="person">
+                <div class="status"></div>
+            <div class="person-name"></div>
+            </div> -->
             
         </div>
-        <div class="send-message-box hide">
-            <input type="text" name="" id="send-text">
-            <button id="send-button">Send</button>
+
+        <!-- chat app -->
+        <div class="chat-app">
+            <!-- welcome message -->
+            <div class="user-name">
+                <h1>Welcome</h1>
+                <input type="text" id="input-name" placeholder="Enter your name">
+                <button class="join-button">Join</button>
+            </div>
+            <div class="chat-box hide">
+                
+    
+                <!-- chat container -->
+                <!-- <div class="chat-container hide"> -->
+    
+                    <!-- <div class="chat join-chat"></div> -->
+                    <!-- <div class="chat leave-chat"></div> -->
+    
+                        <!-- <div class="chat right">
+                        <div class="chat-name">Steve</div>
+                        <div class="chat-message"> hi there</div>
+                        </div>
+    
+                        <div class="chat left">
+                            <div class="chat-name">
+                            Steve
+                        </div>
+                        <div class="chat-message">
+                            hi there
+                        </div>
+                        </div> -->
+                <!-- </div> -->
+                
+            </div>
+            <div class="send-message-box hide">
+                <input type="text" name="" id="send-text">
+                <button id="send-button">Send</button>
+            </div>
+           
         </div>
-       
     </div>
+
+    
 
     <!-- <button id="fun">click me</button> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.2.0/socket.io.js" integrity="sha512-WL6WGKMPBiM9PnHRYIn5YEtq0Z8XP4fkVb4qy7PP4vhmYQErJ/dySyXuFIMDf1eEYCXCrQrMJfkNwKc9gsjTjA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         const socket = io.connect("https://whatsapp-clone-js.herokuapp.com/");
+        // const socket = io.connect("http://localhost:8787/");
         socket.on("joined",(msg)=>{
             // joinChat.innerHTML = msg;
             console.log("msg",msg);

@@ -10,6 +10,7 @@ let chatContainer = document.querySelector(".chat-container")
 let sendMessageBox = document.querySelector(".send-message-box")
 let userNameDiv = document.querySelector(".user-name")
 let joinChat = document.querySelector(".join-chat")
+let onlinePart = document.querySelector(".online-participants")
 
 {/* <div class="chat right">
     <div class="chat-name">Steve</div>
@@ -76,7 +77,16 @@ joinButton.addEventListener("click",function(){
 
         chatBox.classList.remove("hide");
         sendMessageBox.classList.remove("hide");
+        onlinePart.classList.remove("hide");
         userNameDiv.classList.add("hide");
+
+        // <div class="person">
+        //         <div class="status"></div>
+        //     <div class="person-name"></div>
+        //     </div>
+
+       
+
         userNameInput.value="";
     }
 })
