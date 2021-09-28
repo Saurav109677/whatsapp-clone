@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realtime Chat App</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <div class="chat-app">
+        <!-- welcome message -->
+        <div class="user-name">
+            <h1>Welcome</h1>
+            <input type="text" id="input-name" placeholder="Enter your name">
+            <button class="join-button">Join</button>
+        </div>
+        <div class="chat-box hide">
+            
+
+            <!-- chat container -->
+            <!-- <div class="chat-container hide"> -->
+
+                <!-- <div class="chat join-chat"></div> -->
+                <!-- <div class="chat leave-chat"></div> -->
+
+                    <!-- <div class="chat right">
+                    <div class="chat-name">Steve</div>
+                    <div class="chat-message"> hi there</div>
+                    </div>
+
+                    <div class="chat left">
+                        <div class="chat-name">
+                        Steve
+                    </div>
+                    <div class="chat-message">
+                        hi there
+                    </div>
+                    </div> -->
+            <!-- </div> -->
+            
+        </div>
+        <div class="send-message-box hide">
+            <input type="text" name="" id="send-text">
+            <button id="send-button">Send</button>
+        </div>
+       
+    </div>
+
+    <!-- <button id="fun">click me</button> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.2.0/socket.io.js" integrity="sha512-WL6WGKMPBiM9PnHRYIn5YEtq0Z8XP4fkVb4qy7PP4vhmYQErJ/dySyXuFIMDf1eEYCXCrQrMJfkNwKc9gsjTjA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const socket = io.connect("http://localhost:8787");
+        socket.on("joined",(msg)=>{
+            // joinChat.innerHTML = msg;
+            console.log("msg",msg);
+        })
+
+        
+    </script>
+    <script src="script.js"></script>
+    <script src="socket.js"></script>
+</body>
+</html>
