@@ -51,7 +51,7 @@
     <!-- <button id="fun">click me</button> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.2.0/socket.io.js" integrity="sha512-WL6WGKMPBiM9PnHRYIn5YEtq0Z8XP4fkVb4qy7PP4vhmYQErJ/dySyXuFIMDf1eEYCXCrQrMJfkNwKc9gsjTjA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        const socket = io.connect("http://localhost:8787");
+        const socket = io.connect("https://whatsapp-clone-js.herokuapp.com/");
         socket.on("joined",(msg)=>{
             // joinChat.innerHTML = msg;
             console.log("msg",msg);

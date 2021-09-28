@@ -38,6 +38,8 @@ io.on("connection", (socket) => {
 
 });
 
-httpServer.listen(8787,()=>{
+let PORT = process.env.PORT || 8787;
+
+httpServer.listen(PORT,()=>{
     console.log("app stared");
 });
